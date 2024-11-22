@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #18181b; /* Zinc-900 */
+  --background-secondary: #27272a; /* Zinc-800 */
+  --foreground: #e4e4e7; /* Zinc-200 */
+  --accent-primary: #3f3f46; /* Zinc-700 */
+  --accent-secondary: #71717a; /* Zinc-500 */
+  --accent-highlight: #a855f7; /* Purple-500 for highlights */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #18181b;
+    --background-secondary: #27272a;
+    --foreground: #e4e4e7;
+    --accent-primary: #3f3f46;
+    --accent-secondary: #71717a;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(135deg, var(--background) 0%, var(--background-secondary) 100%);
+  background-attachment: fixed;
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-secondary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-highlight);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(135deg, var(--background) 0%, var(--background-secondary) 100%);
+  }
+
+  .bg-gradient-accent {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  }
+
+  /* Enhanced Glassmorphism effect utility */
+  .glass-morphism {
+    background: rgba(39, 39, 42, 0.7); /* Zinc-800 with opacity */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(244, 244, 245, 0.1); /* Zinc-100 with low opacity */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .hover-lift {
+    transition: transform 0.2s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Typography enhancements */
+h1,
+h2,
+h3 {
+  color: var(--foreground);
+  font-weight: bold;
+  letter-spacing: -0.025em;
+}
+
+a {
+  color: var(--accent-highlight);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-highlight) 80%, white);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: var(--foreground);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(244, 244, 245, 0.1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
