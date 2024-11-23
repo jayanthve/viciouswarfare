@@ -97,8 +97,8 @@ export default function Contact() {
 
             <div className="relative bg-black/40 backdrop-blur-xl rounded-2xl shadow-2xl p-8 border border-gray-800">
               <div className="text-center mb-12">
-                <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-4">
-                  <MessageCircle className="text-purple-500" size={44} />
+                <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-red-800 to-red-600 bg-clip-text text-transparent flex items-center justify-center gap-4">
+                  <MessageCircle className="text-red-700" size={44} />
                   Contact Us
                 </h1>
                 <p className="text-gray-400 text-lg">
@@ -125,7 +125,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="group">
                   <div className="flex items-center mb-3">
-                    <User className="mr-2 text-purple-400 group-focus-within:text-purple-300 transition-colors" />
+                    <User className="mr-2 text-red-600 group-focus-within:text-purple-300 transition-colors" />
                     <label className="text-gray-300 font-medium">Name</label>
                   </div>
                   <input
@@ -151,7 +151,7 @@ export default function Contact() {
 
                 <div className="group">
                   <div className="flex items-center mb-3">
-                    <Mail className="mr-2 text-purple-400 group-focus-within:text-purple-300 transition-colors" />
+                    <Mail className="mr-2 text-red-600 group-focus-within:text-purple-300 transition-colors" />
                     <label className="text-gray-300 font-medium">Email</label>
                   </div>
                   <input
@@ -177,7 +177,7 @@ export default function Contact() {
 
                 <div className="group">
                   <div className="flex items-center mb-3">
-                    <MessageCircle className="mr-2 text-purple-400 group-focus-within:text-purple-300 transition-colors" />
+                    <MessageCircle className="mr-2 text-red-600 group-focus-within:text-purple-300 transition-colors" />
                     <label className="text-gray-300 font-medium">Message</label>
                   </div>
                   <textarea
@@ -202,7 +202,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-lg 
+                  className="w-full bg-gradient-to-r from-red-800 to-red-800 text-white p-4 rounded-lg 
                   hover:from-purple-500 hover:to-pink-500 transition-all duration-300 
                   transform hover:-translate-y-1 font-medium text-lg
                   flex items-center justify-center gap-3 focus:ring-2 focus:ring-purple-500/50 

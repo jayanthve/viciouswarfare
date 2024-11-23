@@ -16,11 +16,11 @@ export default function Footer() {
   ];
 
   const siteLinks = [
-    { name: "Home", href: "/" },
-    { name: "Events", href: "/events" },
-    { name: "Contact", href: "/contact" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
+    { name: "Sitemap", href: "/sitemap" },
+    // { name: "Events", href: "/events" },
+    // { name: "Contact", href: "/contact" },
+    // { name: "Privacy Policy", href: "/privacy" },
+    // { name: "Terms of Service", href: "/terms" },
   ];
 
   return (
