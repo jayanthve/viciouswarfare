@@ -35,7 +35,7 @@ const EventCard = ({ event, onDetailsClick }) => {
           <MapPin className="mr-3 h-5 w-5 text-gray-400" />
           <span>{event.city}</span>
         </div>
-        <div className="font-bold text-lg bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <div className="font-bold text-lg bg-gradient-to-r from-red-800 to-red-600 bg-clip-text text-transparent">
           {event.ticket}
         </div>
         <button
@@ -58,7 +58,7 @@ const EventDetailsModal = ({ event, isOpen, onClose }) => {
     <div className="fixed inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-lg max-w-md w-full p-6 max-h-[90vh] overflow-y-auto shadow-2xl">
         <div className="flex justify-between items-center border-b border-gray-700 pb-4 mb-6">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-red-800 to-red-600 bg-clip-text text-transparent">
             Event Details
           </h2>
           <button
@@ -79,7 +79,7 @@ const EventDetailsModal = ({ event, isOpen, onClose }) => {
           </div>
           <div className="text-lg font-semibold text-white">{event.ticket}</div>
           <button
-            className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-md
+            className="w-full px-6 py-3 bg-gradient-to-r from-red-800 to-red-600 text-white rounded-md
             hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:-translate-y-1
             focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 font-semibold"
           >
@@ -121,7 +121,7 @@ export default function Events() {
       <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container mx-auto px-4 py-12">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-red-800 to-red-600 bg-clip-text text-transparent">
               Live Events
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
