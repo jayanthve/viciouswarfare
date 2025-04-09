@@ -13,7 +13,7 @@ export default function HomePage() {
             <div className="text-gray-300 leading-relaxed space-y-6 text-lg">
               <p>
                 Vicious Warfare was formed in 2014 in Bangalore, India. Nekrozin is the founding
-                member, vocalist, and guitarist. In 2016, Zed joined the band as the bassist.
+                member, vocalist and guitarist. In 2016, Zed joined the band as the bassist.
               </p>
 
               <p>
