@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Mail, Home, Users, MessageSquare, Info } from "lucide-react";
 
 export default function Footer() {
@@ -34,7 +35,7 @@ export default function Footer() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-zinc-400 hover:text-purple-500 transition-colors text-sm"
+                className="text-zinc-400 hover:text-red-500 transition-colors text-sm"
               >
                 {link.name}
               </Link>
@@ -53,7 +54,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.aria}
-                className="text-zinc-400 hover:text-purple-500 transition-colors duration-300"
+                className="text-zinc-400 hover:text-red-500 transition-colors duration-300"
               >
                 <social.icon size={20} />
               </a>
@@ -62,18 +63,39 @@ export default function Footer() {
         </div>
 
         {/* Copyright Section */}
-        {/* Copyright Section */}
         <div className="text-center border-t border-zinc-800 pt-4">
-          <p className="text-zinc-500 text-sm">
-            &copy; {new Date().getFullYear()}{" "}
-            <Link
-              href="https://www.viciouswarfare.com"
-              className="text-zinc-500 hover:text-purple-500 transition-colors font-bold"
-            >
-              ViciousWarfare
-            </Link>{" "}
-            | All Rights Reserved.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 items-center">
+            <div className="flex space-x-2 justify-center md:justify-start items-center text-sm text-zinc-500">
+              <Image
+                src="/rhLogo.png"
+                alt="Redhood AI Logo"
+                width={90}
+                height={100}
+                className="h-8 w-auto"
+              />
+              <span>
+                Powered by{" "}
+                <a
+                  href="https://redhood.ai/website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-500 hover:text-red-500 transition-colors font-bold"
+                >
+                  redhood.ai
+                </a>
+              </span>
+            </div>
+            <p className="text-zinc-500 text-sm">
+              &copy; {new Date().getFullYear()}{" "}
+              <Link
+                href="/"
+                className="text-zinc-500 hover:text-red-500 transition-colors font-bold"
+              >
+                ViciousWarfare
+              </Link>{" "}
+              | All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

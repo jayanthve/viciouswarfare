@@ -89,11 +89,11 @@ export default function Contact() {
           content="Complete the form below with your contact information to connect with Vicious Warfare."
         />
       </Head>
-      <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black py-16 px-4">
+      <div className="min-h-screen bg-transparent py-16 px-4">
         <div className="container mx-auto max-w-2xl">
           <div className="relative">
             {/* Decorative elements */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl blur-xl" />
+            <div className="absolute inset-0 rounded-2xl blur-xl" />
 
             <div className="relative bg-black/40 backdrop-blur-xl rounded-2xl shadow-2xl p-8 border border-gray-800">
               <div className="text-center mb-12">
@@ -118,15 +118,18 @@ export default function Contact() {
               {submitStatus === "error" && (
                 <div className="bg-rose-900/30 backdrop-blur-sm border border-rose-500/50 text-rose-300 p-4 rounded-lg mb-8 flex items-center">
                   <AlertTriangle className="mr-3 text-rose-400" />
-                  <span className="font-medium">Please fill in all required fields correctly.</span>
+                  <span className="font-medium">
+                    Please fill in all required fields correctly.
+                  </span>
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="group">
                   <div className="flex items-center mb-3">
-                    <User className="mr-2 text-red-600 group-focus-within:text-purple-300 transition-colors" />
-                    <label className="text-gray-300 font-medium">Name</label>
+                    <label className="text-gray-300 font-medium">
+                      Full Name
+                    </label>
                   </div>
                   <input
                     type="text"
@@ -151,7 +154,6 @@ export default function Contact() {
 
                 <div className="group">
                   <div className="flex items-center mb-3">
-                    <Mail className="mr-2 text-red-600 group-focus-within:text-purple-300 transition-colors" />
                     <label className="text-gray-300 font-medium">Email</label>
                   </div>
                   <input
@@ -177,7 +179,6 @@ export default function Contact() {
 
                 <div className="group">
                   <div className="flex items-center mb-3">
-                    <MessageCircle className="mr-2 text-red-600 group-focus-within:text-purple-300 transition-colors" />
                     <label className="text-gray-300 font-medium">Message</label>
                   </div>
                   <textarea
@@ -202,8 +203,8 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-red-800 to-red-800 text-white p-4 rounded-lg 
-                  hover:from-purple-500 hover:to-pink-500 transition-all duration-300 
+                  className="w-full bg-red-800 text-white p-4 rounded-lg 
+                  hover:bg-red-600 transition-all duration-300 
                   transform hover:-translate-y-1 font-medium text-lg
                   flex items-center justify-center gap-3 focus:ring-2 focus:ring-purple-500/50 
                   focus:ring-offset-2 focus:ring-offset-black group"

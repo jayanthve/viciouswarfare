@@ -27,7 +27,7 @@ const events = [
 const EventCard = ({ event, onDetailsClick }) => {
   return (
     <div className="bg-gray-900 border border-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1">
-      <div className="px-6 py-4 flex justify-between items-center border-b border-gray-700 bg-gradient-to-r from-gray-900 to-black">
+      <div className="px-6 py-4 flex justify-between items-center border-b border-gray-700 bg-gray-900">
         <h2 className="text-xl font-bold text-white">{event.date}</h2>
       </div>
       <div className="p-6 space-y-4 bg-gradient-to-b from-gray-900 to-black">
@@ -118,20 +118,25 @@ export default function Events() {
           content="Revive and create the dark, raw sound of old-school black and death metal music from the 1980s and 1990s."
         />
       </Head>
-      <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-transparent">
         <div className="container mx-auto px-4 py-12">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-red-800 to-red-600 bg-clip-text text-transparent">
               Live Events
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Stay updated with news, live event dates, purchase tickets, and more.
+              Stay updated with news, live event dates, purchase tickets, and
+              more.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event) => (
-              <EventCard key={event.id} event={event} onDetailsClick={handleEventDetailsClick} />
+              <EventCard
+                key={event.id}
+                event={event}
+                onDetailsClick={handleEventDetailsClick}
+              />
             ))}
           </div>
 

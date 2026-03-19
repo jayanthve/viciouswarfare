@@ -30,8 +30,8 @@ export default function Header() {
               height={50}
               className="rounded-full"
             />
-            <span className="font-bold text-xl tracking-wider uppercase hidden sm:block">
-              {/* Vicious Warfare */}
+            <span className="font-heading text-gray-300 tracking-wide text-xl uppercase hidden sm:block pr-3">
+              Vicious Warfare
             </span>
           </Link>
 
@@ -68,7 +68,13 @@ export default function Header() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+              <path
+                d={
+                  isMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
+              ></path>
             </svg>
           </button>
         </div>
